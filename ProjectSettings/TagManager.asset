@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Obstacle
+  - Enemy
+  - Building
   - 
   - 
   - 
@@ -43,6 +43,12 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 3751439727
+    locked: 0
+  - name: Player
+    uniqueID: 56793291
+    locked: 0
+  - name: Obstacle
+    uniqueID: 1167494981
     locked: 0
   - name: Building
     uniqueID: 3974532305
