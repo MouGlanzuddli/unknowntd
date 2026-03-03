@@ -1,50 +1,54 @@
 using UnityEngine;
+using System.Collections;
 
 public class UnitSpawner : MonoBehaviour
 {
-    [Header("Spawner Settings")]
+    [System.Serializable]
+    public class Wave
+    {
+        public int enemyCount;
+        public float spawnInterval;
+    }
+
+    [Header("Wave Settings")]
+    [SerializeField] private Wave[] waves;
+    [SerializeField] private float timeBetweenWaves = 5f;
+
+    [Header("Spawn Settings")]
     [SerializeField] private GameObject unitPrefab;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float spawnInterval = 2f;
-    [SerializeField] private int maxUnits = 5;
 
-    private float timer;
-    private int currentUnits;
+    private int currentWaveIndex = 0;
+    private bool isSpawning = false;
 
-    private void Update()
+    private void Start()
     {
-        if (unitPrefab == null || spawnPoint == null)
-            return;
+        StartCoroutine(StartNextWave());
+    }
 
-        if (currentUnits >= maxUnits)
-            return;
-
-        timer += Time.deltaTime;
-
-        if (timer >= spawnInterval)
+    private IEnumerator StartNextWave()
+    {
+        while (currentWaveIndex < waves.Length)
         {
-            SpawnUnit();
-            timer = 0f;
+            yield return StartCoroutine(SpawnWave(waves[currentWaveIndex]));
+            currentWaveIndex++;
+
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
+
+        Debug.Log("All waves finished!");
     }
 
-    private void SpawnUnit()
+    private IEnumerator SpawnWave(Wave wave)
     {
-        GameObject unit = Instantiate(
-            unitPrefab,
-            spawnPoint.position,
-            Quaternion.identity
-        );
+        isSpawning = true;
 
-        currentUnits++;
+        for (int i = 0; i < wave.enemyCount; i++)
+        {
+            Instantiate(unitPrefab, spawnPoint.position, Quaternion.identity);
+            yield return new WaitForSeconds(wave.spawnInterval);
+        }
 
-
-    }
-
-    public void NotifyUnitDestroyed()
-    {
-        currentUnits--;
-        if (currentUnits < 0)
-            currentUnits = 0;
+        isSpawning = false;
     }
 }
