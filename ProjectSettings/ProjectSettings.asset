@@ -583,7 +583,8 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: APP_UI_EDITOR_ONLY
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -682,11 +683,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 22bb48dc-f969-4d1f-a01d-4b691d48f085
+  cloudProjectId: a8e9bcc9-9633-4fb4-8e97-9a40191e4965
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: UnknownTowerDefense
-  organizationId: hoangnguyenngocling1
+  projectName: TowerDefend
+  organizationId: khoa20251
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
