@@ -21,19 +21,9 @@ providers = {
 		priority = 50
 		defaultAction = null
 	}
-	"unity.ai.file.search" = {
-		active = true
-		priority = 85
-		defaultAction = null
-	}
 	adb = {
 		active = false
 		priority = 2500
-		defaultAction = null
-	}
-	presets_provider = {
-		active = false
-		priority = -10
 		defaultAction = null
 	}
 	find = {
@@ -46,7 +36,7 @@ providers = {
 		priority = 90
 		defaultAction = null
 	}
-	profilermarkers = {
+	store = {
 		active = false
 		priority = 100
 		defaultAction = null
@@ -56,7 +46,7 @@ providers = {
 		priority = 100
 		defaultAction = null
 	}
-	store = {
+	profilermarkers = {
 		active = false
 		priority = 100
 		defaultAction = null

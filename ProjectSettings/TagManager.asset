@@ -2,8 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 3
-  tags: []
+  serializedVersion: 2
+  tags:
+  - Gold
+  - Enemy
+  - Castle
   layers:
   - Default
   - TransparentFX
@@ -11,10 +14,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Obstacle
-  - Enemy
+  - Wall
   - Building
+  - Gold
+  - Pawn
   - 
   - 
   - 
@@ -41,17 +44,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Objects
-    uniqueID: 3751439727
-    locked: 0
-  - name: Player
-    uniqueID: 56793291
-    locked: 0
-  - name: Obstacle
-    uniqueID: 1167494981
-    locked: 0
-  - name: Building
-    uniqueID: 3974532305
-    locked: 0
-  m_RenderingLayers:
-  - Default

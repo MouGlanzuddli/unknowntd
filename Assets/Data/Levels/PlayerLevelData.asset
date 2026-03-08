@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d2a55f9da54a14780d3438531e0eb1, type: 3}
+  m_Name: PlayerLevelData
+  m_EditorClassIdentifier: 
+  levels:
+  - requiredExp: 100
+    spriteLibrary: {fileID: 7108339969198208228, guid: 3a313e9371df2d040aa93da9c1502531, type: 3}
+  - requiredExp: 200
+    spriteLibrary: {fileID: 7108339969198208228, guid: 0b9a7ab8e97bbd24c9284683cd36b3a8, type: 3}
+  - requiredExp: 300
+    spriteLibrary: {fileID: 7108339969198208228, guid: 16e47a2c6f6e33349ad22d80913a3eb0, type: 3}

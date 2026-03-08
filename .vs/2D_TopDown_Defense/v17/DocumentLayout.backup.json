@@ -1,0 +1,485 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|d:\\projects\\unity\\2d\\2d_topdown_defense\\assets\\scripts\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\baseunitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\baseunitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\randomanimationoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\randomanimationoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\unitlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\playerunitmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerunitmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\warriorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\warriorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\pawncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pawncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\playerresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\data\\unitdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\unitdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\data\\unitleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\unitleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\data\\combatunitdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\combatunitdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\torchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\torchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\unitmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\unitmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\unitanimationevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitanimationevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\wavespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wavespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\enums\\faction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enums\\faction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\data\\pawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\pawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\goldmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goldmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\goldmine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goldmine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\quickbarmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\quickbarmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\assets\\scripts\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A75D766-0851-C2A5-3AA3-9097E84D62FB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RandomAnimationOffset.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\RandomAnimationOffset.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RandomAnimationOffset.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\RandomAnimationOffset.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RandomAnimationOffset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T04:52:04.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitLevel.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitLevel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitLevel.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitLevel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitLevel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwEwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:59:35.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UnitLevelData.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\UnitLevelData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\UnitLevelData.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\UnitLevelData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\UnitLevelData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:38:06.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Faction.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Enums\\Faction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\Faction.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Enums\\Faction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enums\\Faction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T06:34:49.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\EnemyManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyManager.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAApwA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T06:31:06.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UnitMovement.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitMovement.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitMovement.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAkwHEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T04:31:05.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PawnData.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\PawnData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\PawnData.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\PawnData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\PawnData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:56:24.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "WaveSpawner.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\WaveSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WaveSpawner.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\WaveSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WaveSpawner.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:12:38.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TorchController.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\TorchController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TorchController.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\TorchController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TorchController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:56:29.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\LevelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:52:11.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CombatUnitData.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\CombatUnitData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\CombatUnitData.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\CombatUnitData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\CombatUnitData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:17:46.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WarriorController.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\WarriorController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WarriorController.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\WarriorController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WarriorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:09:43.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Health.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T12:39:53.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GoldMine.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GoldMine.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GoldMine.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GoldMine.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GoldMine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T12:23:28.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Castle.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Castle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Castle.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Castle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Castle.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAApwBYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T12:14:10.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "QuickBarManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\QuickBarManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\QuickBarManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\QuickBarManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\QuickBarManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T08:25:34.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerUnitManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerUnitManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerUnitManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerUnitManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerUnitManager.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T08:21:42.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Shop\\ShopManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Shop\\ShopManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T08:05:11.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UnitData.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\UnitData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\UnitData.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\Data\\UnitData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\UnitData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T07:51:15.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UnitManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T07:48:00.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameUI.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GameUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameUI.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GameUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameUI.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowCYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T06:41:46.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerResource.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerResource.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerResource.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerResource.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerResource.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T06:34:39.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseUnitController.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\BaseUnitController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BaseUnitController.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\BaseUnitController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BaseUnitController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T05:36:46.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UnitAnimationEvents.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitAnimationEvents.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitAnimationEvents.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\UnitAnimationEvents.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitAnimationEvents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T04:59:42.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GoldManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GoldManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GoldManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\GoldManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GoldManager.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwE4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T04:47:54.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PawnController.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PawnController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PawnController.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PawnController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PawnController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwEsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T04:35:28.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ResourceManager.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\ResourceManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ResourceManager.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\ResourceManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ResourceManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T04:25:48.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:11:54.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "D:\\Projects\\Unity\\2D\\2D_TopDown_Defense\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAEwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:11:43.557Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

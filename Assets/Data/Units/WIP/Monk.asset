@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e3dd984d151a8478c5d1691f85cf71, type: 3}
+  m_Name: Monk
+  m_EditorClassIdentifier: 
+  unitName: Monk
+  icon: {fileID: 21300000, guid: c863f70f358b66f46b1dc7a7ff62165a, type: 3}
+  faction: 1
+  maxHealth: 0
+  damage: 0
+  attackRange: 0
+  moveSpeed: 0
+  isFacingRight: 1
+  prefab: {fileID: 0}
+  costGold: 399
+  purchasable: 1
+  attackCooldown: 0
