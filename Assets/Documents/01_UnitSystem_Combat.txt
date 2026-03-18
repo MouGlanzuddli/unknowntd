@@ -1,0 +1,49 @@
+TÀI LIỆU HỆ THỐNG UNIT VÀ COMBAT (PLAYER & ENEMY)
+==============================================
+
+1. TỔNG QUAN KIẾN TRÚC (INHERITANCE)
+-----------------------------------
+Tất cả các thực thể trong trò chơi (Người chơi, Lính, Boss) đều được xây dựng dựa trên một lớp cơ sở chung là `BaseUnitController`. Việc sử dụng tính kế thừa (Inheritance) giúp chúng ta tái sử dụng code cho việc quản lý máu (Health), di chuyển (Movement) và vòng đời của Unit.
+
+- **BaseUnitController**: Chứa logic chung về máu, cấp độ, quản lý mục tiêu và các sự kiện Animation.
+- **PlayerController**: Kế thừa và mở rộng logic để điều khiển bằng chuột/bàn phím.
+- **TorchController / TntController**: Kế thừa để định nghĩa cách tấn công riêng biệt (Cận chiến hoặc ném TNT).
+
+[Sơ đồ 1: Cấu trúc kế thừa của các Unit]
+
+2. CƠ CHẾ DI CHUYỂN (MOVEMENT HANDLING)
+--------------------------------------
+Thay vì viết trực tiếp logic di chuyển vào Controller, dự án sử dụng mô hình "Strategy Pattern" thông qua lớp `BaseMovement`. Điều này cho phép chúng ta dễ dàng đổi cách di chuyển cho Unit mà không ảnh hưởng đến logic chiến đấu.
+
+- **UnitMovement**: Sử dụng A* Pathfinding (AIPath) để tìm đường tự động (dành cho Enemy).
+- **PlayerMovement**: Sử dụng Rigidbody2D để di chuyển dựa trên Input của người chơi.
+
+3. HỆ THỐNG CHIẾN ĐẤU (COMBAT SYSTEM)
+------------------------------------
+Hệ thống chiến đấu hoạt động dựa trên sự phối hợp giữa Code và Animation thông qua 4 bước chính:
+
+Bước 1: Kích hoạt (TryAttack)
+- Player: Kích hoạt khi nhấn chuột trái.
+- Enemy: Tự động kích hoạt khi quân địch đến đủ gần mục tiêu.
+
+Bước 2: Animation
+- Gọi Animator Trigger "attack". Tại đây, chuỗi Animation của Unity sẽ bắt đầu chạy.
+
+Bước 3: Sự kiện đánh trúng (AttackHit)
+- Đây là phần quan trọng nhất. Chúng ta sử dụng **Animation Events** để bộ Engine Unity tự động gọi hàm `AttackHit` tại đúng thời điểm thanh kiếm vung ra hoặc TNT được ném.
+- Logic trong `AttackHit` sẽ kiểm tra các đối tượng xung quanh hoặc instantiate các Particle/Projectiles.
+
+Bước 4: Gây sát thương (Damage Application)
+- Hệ thống sử dụng Interface `IDamageable`. Bất cứ thứ gì có IDamageable (Unit, Castle) đều có thể nhận sát thương thông qua hàm `TakeDamage`.
+
+[Sơ đồ 2: Luồng xử lý tấn công - Attack Flow]
+[Sơ đồ 3: Quy trình gây sát thương thông qua IDamageable]
+
+4. ĐẶC THÙ CỦA BOSS TNT
+-----------------------
+Boss TNT là một ví dụ điển hình về việc mở rộng hệ thống Combat:
+- Thay vì gây dame trực tiếp trong `AttackHit`, nó tạo ra một Object TNT.
+- Object TNT tự xử lý logic bay (Parabola) và gây nổ diện rộng (OverlapCircle).
+- Logic nổ được thiết kế để bỏ qua đồng đội kẻ địch (Friendly Fire Filter).
+
+[Sơ đồ 4: Flow xử lý ném TNT và Nổ]

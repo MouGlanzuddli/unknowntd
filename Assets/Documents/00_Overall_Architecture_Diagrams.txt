@@ -1,0 +1,81 @@
+SƠ ĐỒ TỔNG THỂ KIẾN TRÚC DỰ ÁN (MERMAID CODE)
+=============================================
+
+[Sơ đồ 1: Sơ đồ bao quát toàn bộ hệ thống - Project Structure]
+---------------------------------------------------------------
+graph TD
+    subgraph GameManager_System
+        A[GameManager] -->|State Management| B[GameUI]
+        A -->|Unlocking Maps| C[SelectMap Scene]
+    end
+    
+    subgraph Unit_Management
+        D[PlayerUnitManager] -->|Tracks| F[BaseUnitController]
+        E[EnemyManager] -->|Tracks| F
+        G[LevelManager] -->|Data Source| H[WaveSpawner]
+        H -->|Instantiate| F
+    end
+
+    subgraph Data_System
+        I[UnitData Assets] -.->|Blueprint| F
+        J[LevelData Assets] -.->|Blueprint| G
+    end
+
+    subgraph Combat_System
+        F -->|IDamageable| K[TakeDamage Logic]
+        L[Castle] -->|IDamageable| K
+    end
+
+
+[Sơ đồ 2: Chi tiết về Kế thừa và Sử dụng Movement Strategy]
+------------------------------------------------------------
+classDiagram
+    BaseUnitController <|-- PlayerController
+    BaseUnitController <|-- WarriorController
+    BaseUnitController <|-- TorchController
+    BaseUnitController <|-- TntController
+    
+    BaseUnitController *-- BaseMovement
+    
+    BaseMovement <|-- PlayerMovement
+    BaseMovement <|-- UnitMovement
+    
+    class BaseUnitController {
+        +BaseMovement movement
+        +TryAttack()
+        +AttackHit()
+    }
+    
+    class PlayerController {
+        +PlayerMovement movement (via RB2D)
+    }
+
+    class TorchController {
+        +UnitMovement movement (via AIPath)
+    }
+    
+    class WarriorController {
+        +UnitMovement movement (via AIPath)
+    }
+
+
+[Sơ đồ 3: Sơ đồ luồng dữ liệu và sự kiện giữa các Manager]
+-----------------------------------------------------------
+sequenceDiagram
+    participant UI as GameUI
+    participant Game as GameManager
+    participant Level as LevelManager
+    participant Spawner as WaveSpawner
+    participant Enemy as Enemy Unit
+    participant Castle as Castle Instance
+    
+    Level->>Spawner: Send WaveData
+    Spawner->>Enemy: Instantiate & Set Target -> Castle
+    Enemy->>Enemy: Moving based on A* Pathfinding
+    Enemy->>Castle: AttackHit! (TakeDamage)
+    Castle->>Game: HP <= 0 (LoseGame)
+    Enemy->>Enemy: OnDeath Event
+    Enemy-->>Spawner: aliveEnemies--
+    Spawner->>Level: Current Wave Clear
+    Level->>Game: All Waves Clear (WinGame)
+    Game->>UI: Show Win/Lose Panel

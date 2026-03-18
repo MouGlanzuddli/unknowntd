@@ -1,0 +1,67 @@
+SƠ ĐỒ HỆ THỐNG SINH QUÂN (MERMAID CODE)
+=======================================
+
+[Sơ đồ 1: Cấu trúc phân cấp dữ liệu Level & Wave]
+--------------------------------------------------
+classDiagram
+    LevelManager *-- LevelData
+    LevelData *-- WaveData
+    WaveData *-- CombatUnitData
+    
+    class LevelData {
+        +string levelName
+        +List waves
+    }
+    class WaveData {
+        +int enemyCount
+        +float startDelay
+        +float spawnInterval
+        +List enemies
+    }
+    class CombatUnitData {
+        +int maxHealth
+        +int damage
+    }
+
+
+[Sơ đồ 2: Luồng hoạt động của WaveSpawner]
+-------------------------------------------
+graph TD
+    A[StartWave] --> B[Wait startDelay]
+    B --> C[Spawning = true]
+    C --> D{Spawned all enemies?}
+    D -- No --> E[Wait spawnInterval]
+    E --> F[Instantiate Enemy at Spawn Point]
+    F --> G[Enemy Init & Set Target Castle]
+    G --> D
+    D -- Yes --> H[Spawning = false]
+    H --> I{All Enemies Dead?}
+    I -- Yes --> J[LevelManager: NextWave]
+    J --> K{Has Next Wave?}
+    K -- Yes --> A
+    K -- No --> L[GameManager: WinGame]
+
+
+[Sơ đồ 3: Logic chuyển Wave và kết thúc Level]
+------------------------------------------------
+sequenceDiagram
+    participant Spawner as WaveSpawner
+    participant Enemy as Enemy Unit
+    participant LevelMgr as LevelManager
+    participant GameMgr as GameManager
+    
+    Enemy->>Spawner: OnEnemyDeath (Event)
+    Spawner->>Spawner: aliveEnemies--
+    
+    Note over Spawner: If spawning == false AND aliveEnemies <= 0
+    
+    Spawner->>LevelMgr: NextWave()
+    LevelMgr-->>Spawner: return (bool) hasNext
+    
+    rect rgb(200, 255, 200)
+    alt hasNext is true
+        Spawner->>Spawner: StartWave Coroutine
+    else hasNext is false
+        Spawner->>GameMgr: WinGame()
+    end
+    end

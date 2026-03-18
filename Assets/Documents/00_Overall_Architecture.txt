@@ -1,0 +1,38 @@
+TỔNG QUAN KIẾN TRÚC TOÀN BỘ DỰ ÁN (PROJECT ARCHITECTURE)
+=====================================================
+
+1. TRIẾT LÝ THIẾT KẾ (DESIGN PHILOSOPHY)
+---------------------------------------
+Dự án được xây dựng dựa trên 3 trụ cột chính để đảm bảo tính ổn định và dễ mở rộng (Scalability):
+- **Tính kế thừa (Inheritance)**: Sử dụng các lớp Base (như `BaseUnitController`, `BaseMovement`) để quản lý các thành phần dùng chung.
+- **Tính đóng gói (Strategy Pattern)**: Logic di chuyển được tách rời khỏi Unit Controller, cho phép thay đổi cách di chuyển (Input người chơi vs AI tìm đường) linh hoạt.
+- **Dữ liệu tập trung (ScriptableObjects)**: Toàn bộ thông số game được lưu trong Editor Assets, giúp Designer cân bằng game mà không cần can thiệp vào mã nguồn.
+
+2. CÁC THÀNH PHẦN CHỐNH (CORE COMPONENTS)
+----------------------------------------
+- **Managers**: Các lớp Singleton quản lý toàn cục như `GameManager` (trạng thái game), `LevelManager` (dữ liệu màn chơi), `PlayerUnitManager` (quản lý quân lính phe ta).
+- **Units**: Các thực thể có máu, có khả năng di chuyển và tấn công. Mọi Unit đều có chung một bộ khung nhưng khác nhau ở cách điều khiển.
+- **Combat & Damage**: Sử dụng Interface `IDamageable` để tạo ra một hệ thống gây sát thương thống nhất giữa tất cả các thực thể.
+
+[Sơ đồ 1: Sơ đồ bao quát toàn bộ hệ thống - Project Structure]
+
+3. CƠ CHẾ KẾ THỪA VÀ DI CHUYỂN (DETAILED INHERITANCE)
+--------------------------------------------------
+Dưới đây là cách mà các Unit khác nhau được cấu tạo:
+
+Phe Player (Người chơi & Unit đồng minh):
+- **PlayerController**: Kế thừa `BaseUnitController`, sử dụng `PlayerMovement` (điều khiển bởi Rigidbody2D).
+- **WarriorController/PawnController**: Kế thừa `BaseUnitController`, sử dụng `UnitMovement` (điều khiển bởi AIPath nhưng theo phe Player).
+
+Phe Enemy (Kẻ địch):
+- **TorchController/TntController**: Kế thừa `BaseUnitController`, sử dụng `UnitMovement` (điều khiển bởi AIPath tìm đường tự động).
+
+[Sơ đồ 2: Chi tiết về Kế thừa và Sử dụng Movement Strategy]
+
+4. KÊNH GIAO TIẾP (COMMUNICATION)
+--------------------------------
+Các thành phần trong dự án tương tác với nhau chủ yếu qua 2 kênh:
+- **Direct Reference (Singleton)**: Dành cho các Manager (`GameManager.Instance`, `Castle.Instance`).
+- **Events (C# Action)**: Dành cho việc cập nhật UI hoặc báo hiệu Unit chết mà không làm code bị rối (Decoupling).
+
+[Sơ đồ 3: Sơ đồ luồng dữ liệu và sự kiện giữa các Manager]

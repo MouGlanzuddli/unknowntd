@@ -29,7 +29,7 @@ public class PlayerMovement : BaseMovement
     {
         if (rb != null)
         {
-            rb.linearVelocity = moveDirection * moveSpeed;
+            rb.velocity = moveDirection * moveSpeed;
         }
     }
 }

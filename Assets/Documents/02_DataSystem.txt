@@ -1,0 +1,44 @@
+TÀI LIỆU HỆ THỐNG DỮ LIỆU (SCRIPTABLE OBJECTS)
+============================================
+
+1. KHÁI NIỆM blueprint (BẢN THIẾT KẾ)
+------------------------------------
+Dự án sử dụng giải pháp **ScriptableObjects** của Unity để lưu trữ dữ liệu. Hãy tưởng tượng:
+- `BaseUnitController` là "cỗ máy" (Logic).
+- `UnitData` là "bản thiết kế" (Data).
+
+Mỗi loại lính (Warrior, Archer, Boss TNT) không cần code riêng nếu logic giống nhau; chúng chỉ cần một file Data riêng để định nghĩa: Máu, Dame, Tốc độ, Tầm đánh và Prefab hiển thị.
+
+[Sơ đồ 1: Mối quan hệ giữa Logic và Data]
+
+2. CẤU TRÚC PHẦN CẤP DỮ LIỆU
+---------------------------
+Dữ liệu được chia làm các lớp kế thừa để linh hoạt:
+
+- **UnitData**: Chứa các thông tin cơ bản nhất (Tên, Máu, Faction, Prefab, Range). Đây là lớp cha cho mọi loại dữ liệu Unit.
+- **CombatUnitData**: Kế thừa từ `UnitData` nhưng thêm các chỉ số chiến đấu như `attackCooldown` (thời gian hồi chiêu).
+- **UnitLevelData**: Chứa thông tin về danh sách các cấp độ (Level 1, 2, 3...), lượng EXP cần để lên cấp tương ứng và thay đổi Sprite khi level up.
+
+[Sơ đồ 2: Cấu trúc kế thừa của các ScriptableObjects]
+
+3. CÁCH DỮ LIỆU ĐƯỢC DÙNG TRONG CONTROLLER
+-----------------------------------------
+Quy trình gán dữ liệu diễn ra như sau:
+
+Bước 1: Tạo Asset chuẩn
+- Người thiết kế game tạo một Asset từ menu: `Create -> Game -> Units -> Combat`. Chỉnh thông số trong Inspector (ví dụ: Dame = 20, HP = 100).
+
+Bước 2: Gán vào Prefab hoặc Spawner
+- Khi một Unit được sinh ra (Instantiate), chúng ta gọi hàm `Init(UnitData data)`.
+
+Bước 3: Gán giá trị thực tế
+- Bên trong `BaseUnitController.Init`, các biến runtime (speed, range, health) sẽ được đọc trực tiếp từ Asset đã truyền vào.
+- Nếu dữ liệu là `CombatUnitData`, Controller sẽ ép kiểu (cast) để đọc thêm các thông số cooldown.
+
+4. LỢI ÍCH CỦA HỆ THỐNG NÀY
+---------------------------
+- **Không cần sửa Code**: Nếu muốn tăng sức mạnh cho quân địch, bạn chỉ cần chỉnh một con số trong file Asset mà không cần mở script.
+- **Tiết kiệm bộ nhớ**: Hàng trăm Unit trên sân đấu sẽ dùng chung một file Asset dữ liệu thay vì mỗi Unit tự lưu một bản copy thông số riêng.
+- **Dễ mở rộng**: Có thể tạo ra 10 loại quái khác nhau chỉ bằng việc tạo ra 10 file Asset dữ liệu và dùng chung một script `TorchController`.
+
+[Sơ đồ 3: Quy trình từ lúc tạo Asset đến khi Unit hoạt động]

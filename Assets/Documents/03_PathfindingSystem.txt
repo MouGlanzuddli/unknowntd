@@ -1,0 +1,38 @@
+TÀI LIỆU HỆ THỐNG TỰ ĐỘNG TÌM ĐƯỜNG (A* PATHFINDING)
+===================================================
+
+1. GIỚI THIỆU VỀ CÔNG NGHỆ SỬ DỤNG
+----------------------------------
+Dự án tích hợp thư viện **A* Pathfinding Project**, một công cụ mạnh mẽ và tối ưu của bên thứ ba dành cho Unity. Hệ thống này giúp các Unit Enemy tự động né tránh chướng ngại vật và tìm đường đi ngắn nhất đến mục tiêu (Castle hoặc Player).
+
+2. CÁC THÀNH PHẦN CHÍNH
+-----------------------
+- **AstarPath**: Đối tượng quản lý toàn bộ bản đồ (Grid Graph). Nó quét (Scan) địa hình để xác định những vùng nào Unit có thể đi qua được (Walkable).
+- **AIPath**: Component được gắn trực tiếp trên mỗi Unit. Đây là "linh hồn" điều khiển việc di chuyển.
+- **UnitMovement**: Script trung gian do chúng ta viết để điều khiển `AIPath` theo yêu cầu của Game Logic.
+
+3. LOGIC TÌM ĐƯỜNG VÀ DỪNG LẠI (STOP DISTANCE)
+---------------------------------------------
+Luồng hoạt động của hệ thống tìm đường diễn ra như sau:
+
+Bước 1: Thiết lập mục tiêu (SetTarget)
+- Controller sẽ gọi `SetTarget(Target, Distance)`. Trong đó `Distance` chính là tầm đánh (attack range) lấy từ `UnitData`.
+- Hệ thống sẽ thiết lập `aiPath.destination` là vị trí của mục tiêu.
+
+Bước 2: Di chuyển và né tránh
+- `AIPath` sẽ tính toán đường đi tối ưu nhất và tự động điều khiển Unit di chuyển.
+- Unit sẽ tự động tránh các Unit khác hoặc các vật cản được quy định trên Grid Graph.
+
+Bước 3: Dừng lại và Tấn công
+- Khi Unit tiến vào phạm vi `endReachedDistance` (bằng với tầm đánh), thuộc tính `aiPath.reachedEndOfPath` sẽ trở thành `true`.
+- Lúc này Unit sẽ dừng lại và chuyển sang trạng thái tấn công (`isAttacking`).
+
+[Sơ đồ 1: Quy trình tìm đường và tiếp cận mục tiêu]
+
+4. TỐI ƯU HÓA HIỆU NĂNG
+-----------------------
+- **Grid Graph**: Bản đồ được chia thành các ô lưới nhỏ. Điều này giúp việc tính toán tìm đường cực kỳ nhanh ngay cả khi có hàng trăm Unit cùng lúc.
+- **Path Logging**: Log kết quả tìm đường đã được tắt (`PathLog.None`) để tránh làm nặng cửa sổ Console của Unity.
+- **Target Tracking**: Mục tiêu được cập nhật liên tục mỗi khung hình để đảm bảo Enemy luôn đuổi theo Player khi Player di chuyển.
+
+[Sơ đồ 2: Trình tự cập nhật vị trí mục tiêu (Update Loop)]

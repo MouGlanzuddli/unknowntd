@@ -27,6 +27,9 @@ public class GameUI : BaseSingleton<GameUI>
     [SerializeField] private Button loseRetryButton;
     [SerializeField] private Button loseMenuButton;
 
+    [Header("Select Map UI")]
+    [SerializeField] private RectTransform mapListParent;
+
     [Header("Start Menu UI")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
@@ -53,6 +56,39 @@ public class GameUI : BaseSingleton<GameUI>
         
         if (countdownText != null) 
             countdownText.gameObject.SetActive(false);
+
+        if (mapListParent != null)
+        {
+            InitMapSelection();
+        }
+    }
+
+    private void InitMapSelection()
+    {
+        for (int i = 0; i < mapListParent.childCount; i++)
+        {
+            Transform mapItem = mapListParent.GetChild(i);
+            int mapIndex = i + 1;
+
+            Button playBtn = mapItem.GetComponentInChildren<Button>();
+            if (playBtn != null)
+            {
+                bool isUnlocked = GameManager.Instance.IsLevelUnlocked(mapIndex);
+                playBtn.interactable = isUnlocked;
+
+                TextMeshProUGUI btnText = playBtn.GetComponentInChildren<TextMeshProUGUI>();
+                if (btnText != null)
+                {
+                    btnText.text = isUnlocked ? "Play" : "Lock";
+                }
+
+                playBtn.onClick.RemoveAllListeners();
+                playBtn.onClick.AddListener(() => {
+                    GameManager.Instance.LoadMap(mapIndex);
+                    PlayClickSound();
+                });
+            }
+        }
     }
 
     private void OnDestroy()

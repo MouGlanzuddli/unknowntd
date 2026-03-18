@@ -1,0 +1,34 @@
+SƠ ĐỒ HỆ THỐNG TỰ ĐỘNG TÌM ĐƯỜNG (MERMAID CODE)
+==============================================
+
+[Sơ đồ 1: Quy trình tìm đường và tiếp cận mục tiêu]
+----------------------------------------------------
+graph TD
+    A[BaseUnitController: UpdateTarget] -->|Find Target/Castle| B[Find Closest Target]
+    B -->|SetTarget| C[UnitMovement: SetTarget]
+    C -->|Update| D[AIPath: destination = target.position]
+    D --> E[Calculate A* Path]
+    E -->|Moving| F{Reached Distance?}
+    F -- No --> D
+    F -- Yes --> G[AIPath: reachedEndOfPath = true]
+    G --> H[BaseUnitController: TryAttack]
+
+
+[Sơ đồ 2: Trình tự cập nhật vị trí mục tiêu (Update Loop)]
+-----------------------------------------------------------
+sequenceDiagram
+    participant Unit as Unit Instance
+    participant AStar as A* Engine (Grid Graph)
+    participant AIPath as AIPath Component
+    
+    Loop Every Frame
+        Unit->>AIPath: Check Current Position vs Destination
+        AIPath->>AStar: Get Shortest Path to Target
+        AStar-->>AIPath: Return Path Nodes
+        AIPath->>Unit: Move to Next Node
+        Note right of Unit: Avoid obstacles automatically
+    End
+    
+    Unit->>Unit: distance <= stopDistance
+    Unit->>AIPath: Stop Movement
+    Unit->>Unit: Start Attack Animation

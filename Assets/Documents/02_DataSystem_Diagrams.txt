@@ -1,0 +1,51 @@
+SƠ ĐỒ HỆ THỐNG DỮ LIỆU (MERMAID CODE)
+=====================================
+
+[Sơ đồ 1: Mối quan hệ giữa Logic và Data]
+-------------------------------------------
+graph LR
+    A[ScriptableObject Asset] -->|Contains Parameters| B[UnitData]
+    C[BaseUnitController] -->|Init method takes| B
+    B -.->|Provides Values to| C
+    style A fill:#f96,stroke:#333,stroke-width:2px
+    style C fill:#69f,stroke:#333,stroke-width:2px
+
+
+[Sơ đồ 2: Cấu trúc kế thừa của các ScriptableObjects]
+------------------------------------------------------
+classDiagram
+    ScriptableObject <|-- UnitData
+    UnitData <|-- CombatUnitData
+    UnitData <|-- PawnData
+    ScriptableObject <|-- UnitLevelData
+    
+    class UnitData {
+        +string unitName
+        +Faction faction
+        +int maxHealth
+        +float attackRange
+        +GameObject prefab
+    }
+    class CombatUnitData {
+        +float attackCooldown
+    }
+    class UnitLevelData {
+        +List levels
+        +int currentLevel
+    }
+
+
+[Sơ đồ 3: Quy trình từ lúc tạo Asset đến khi Unit hoạt động]
+-------------------------------------------------------------
+sequenceDiagram
+    participant Designer as Designer (Asset Creation)
+    participant Spawner as Castle/Spawner
+    participant Controller as BaseUnitController
+    
+    Designer->>Spawner: Assigns UnitData Asset to Spawner
+    Spawner->>Controller: Instantiate Prefab
+    Spawner->>Controller: Init(data)
+    Controller->>Controller: Read speed from data
+    Controller->>Controller: Read health & attack from data
+    Controller->>Controller: Use data values for runtime stats
+    Controller-->>Controller: Ready for Gameplay

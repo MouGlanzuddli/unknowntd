@@ -1,0 +1,70 @@
+SƠ ĐỒ HỆ THỐNG UNIT VÀ COMBAT (MERMAID CODE)
+===========================================
+
+[Sơ đồ 1: Cấu trúc kế thừa của các Unit]
+-----------------------------------------
+classDiagram
+    BaseSingleton <|-- GameManager
+    BaseSingleton <|-- PlayerUnitManager
+    BaseSingleton <|-- BaseUnitController
+    BaseUnitController <|-- PlayerController
+    BaseUnitController <|-- EnemyController
+    EnemyController <|-- TorchController
+    EnemyController <|-- TntController
+    IDamageable <|.. BaseUnitController
+    IDamageable <|.. Castle
+    
+    class BaseUnitController {
+        +UnitData data
+        +Health health
+        +BaseMovement movement
+        +Init(UnitData)
+        +TryAttack()
+        +AttackHit()*
+    }
+    class PlayerController {
+        +Update()
+        +TryAttack()
+    }
+    class TntController {
+        +explosionRadius
+        +AttackHit()
+    }
+
+
+[Sơ đồ 2: Luồng xử lý tấn công - Attack Flow]
+----------------------------------------------
+graph TD
+    A[Input/AI Strategy] -->|Check Range/CD| B[TryAttack]
+    B -->|Trigger Animator| C[Animation Starts]
+    C -->|Animation Keyframe| D[Unity Animation Event]
+    D -->|Calls Method| E[AttackHit]
+    E -->|Check Colliders| F[Filter Targets]
+    F -->|Apply Damage| G[Target.TakeDamage]
+
+
+[Sơ đồ 3: Quy trình gây sát thương thông qua IDamageable]
+----------------------------------------------------------
+sequenceDiagram
+    participant Attacker
+    participant Target as IDamageable (Unit/Castle)
+    participant Health
+    
+    Attacker->>Target: TakeDamage(amount)
+    Target->>Health: Damage(amount)
+    Health-->>Target: OnHealthChanged
+    Health-->>Target: OnDeath (if HP <= 0)
+    Target->>Target: Play Hit Animation / Destroy
+
+
+[Sơ đồ 4: Flow xử lý ném TNT và Nổ]
+------------------------------------
+flowchart LR
+    A[AttackHit] --> B[Instantiate TNT Prefab]
+    B --> C[Tnt: Init with Start, Target, Radius]
+    C --> D[Tnt: Update Parabola Path]
+    D --> E{Collision at Target?}
+    E -- Yes --> F[Physics2D.OverlapCircleAll]
+    F --> G[Filter non-Enemy targets]
+    G --> H[Apply Damage to Player/Castle]
+    H --> I[Play Explosion Particle & Destroy]

@@ -97,7 +97,7 @@ public class PlayerController : BaseUnitController
     {
         if (isAttacking)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
             return;
         }
 
@@ -110,7 +110,7 @@ public class PlayerController : BaseUnitController
         if (Time.time < nextAttackTime) return;
 
         isAttacking = true;
-        rb.linearVelocity = Vector2.zero;
+        rb.velocity = Vector2.zero;
         animator.SetTrigger(AttackTriggerHash);
         StartCoroutine(PlaySlashDelay());
     }

@@ -1,0 +1,47 @@
+TÀI LIỆU HỆ THỐNG SINH QUÂN (WAVE SPAWNER)
+========================================
+
+1. CƠ CHẾ QUẢN LÝ ĐỢT TẤN CÔNG (WAVE)
+-----------------------------------
+Hệ thống Spawn được thiết kế để tạo ra các đợt tấn công của kẻ địch với độ khó tăng dần. Toàn bộ logic này được phối hợp giữa hai thành phần chính:
+- **LevelManager**: Giữ vai trò là bộ não, lưu trữ toàn bộ dữ liệu về các Level và các Wave bên trong đó.
+- **WaveSpawner**: Giữ vai trò thực hiện việc Instantiate các Unit Enemy vào Game Scene.
+
+2. CẤU TRÚC DỮ LIỆU WAVE (WAVE DATA)
+-----------------------------------
+Mỗi Wave được định nghĩa bởi các thông số sau:
+- **Enemy Count**: Tổng số lượng kẻ địch sẽ xuất hiện trong đợt này.
+- **Start Delay**: Thời gian chờ trước khi bắt đầu Wave (thường là thời gian để chuẩn bị).
+- **Spawn Interval**: Khoảng cách thời gian giữa mỗi lần sinh ra một con quái.
+- **Enemies List**: Danh sách các loại kẻ địch có thể xuất hiện trong Wave này. Hệ thống sẽ chọn ngẫu nhiên từ danh sách này.
+
+[Sơ đồ 1: Cấu trúc phân cấp dữ liệu Level & Wave]
+
+3. QUY TRÌNH SPAWN ENEMY
+-----------------------
+Quy trình sinh quái diễn ra hoàn toàn tự động thông qua `Coroutine` để đảm bảo game không bị giật lag:
+
+Bước 1: Chờ đếm ngược (Countdown)
+- Khi bắt đầu Wave, hệ thống đếm ngược `startDelay`. Thời gian này được hiển thị lên UI cho người chơi biết.
+
+Bước 2: Sinh quái (Instantiation)
+- Cứ sau mỗi `spawnInterval`, một kẻ địch sẽ được sinh ra tại một trong các **Spawn Points** được thiết lập sẵn.
+- Kẻ địch sau khi sinh ra sẽ được `Init` dữ liệu và lập tức nhắm mục tiêu là Lâu đài (`Castle.Instance`).
+
+Bước 3: Quản lý số lượng (Tracking)
+- WaveSpawner theo dõi số lượng kẻ địch còn sống (`aliveEnemies`). 
+- Thông qua hệ thống Event, khi một Unit chết, nó sẽ báo về cho Spawner để trừ số lượng.
+
+[Sơ đồ 2: Luồng hoạt động của WaveSpawner]
+
+4. ĐIỀU KIỆN CHUYỂN WAVE VÀ CHIẾN THẮNG
+-------------------------------------
+Một Wave được coi là hoàn thành khi:
+1. Tất cả kẻ địch trong Wave đã được sinh ra hết.
+2. Không còn kẻ địch nào còn sống trên bản đồ.
+
+Khi thỏa mãn điều kiện, `WaveSpawner` sẽ hỏi `LevelManager` xem còn Wave nào tiếp theo hay không:
+- **Nếu còn**: Bắt đầu đếm ngược cho Wave tiếp theo.
+- **Nếu hết**: Gọi hàm `WinGame()` thông qua `GameManager`.
+
+[Sơ đồ 3: Logic chuyển Wave và kết thúc Level]
